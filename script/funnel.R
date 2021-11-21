@@ -3,7 +3,7 @@ library(meta)
 library(metafor)
 
 
-d1<-read.csv("Response.csv")
+d1<-read.csv("RichnessResponse.csv")
 
 d2<-escalc(measure="ROM",data=d1,m1i=RMEAN,sd1i=RSD,n1i=RN,m2i=BMEAN,sd2i=BSD,n2i=BN)
 
