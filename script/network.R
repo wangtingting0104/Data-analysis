@@ -77,7 +77,7 @@ E(cor.net.clean)$positve <- positive
 
 
 #Export Network file
-write.graph(cor.net.clean,file = "12bulk-0.02%1-strength.graphml",format = "graphml")#获得网络文件，导入gephi
+write.graph(cor.net.clean,file = "12bulk-0.02%1-strength.graphml",format = "graphml")#
 
 source("netpro.R")
 netpropoty <- netpro(cor.net.clean)
