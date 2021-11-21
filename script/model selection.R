@@ -25,7 +25,7 @@ plot(res, type="s")  # Importance of different predictors##
 reswei <- weightable(res)##
 reswei
 summary(res@objects[[1]])# show the detail of specific model of order of 1##
-transmodel <- reswei[reswei$aicc <= min(reswei$aicc) + 2,]  # best model (difference in aicc within 2)##输出最优模型，有时候最优模型不止一个，可以有多个模型与AICc值与AICc值最低的模型的AICc差值<2
+transmodel <- reswei[reswei$aicc <= min(reswei$aicc) + 2,]  # best model (difference in aicc within 2)##
 
 eval(metafor:::.glmulti)
 transres <- as.data.frame(coef(res))  # Weighted averages of the model coefficients
