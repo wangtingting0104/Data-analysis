@@ -1,17 +1,21 @@
 # Data-analysis
 
-Effect size 
+“Effect size” 
 
 Figure1,Figure4，Figure5
 
-CLR: difference taxa
+“CLR: difference taxa”
 
 Figure2
 
-Network：co-occurence
+“Network：co-occurence”
 
 Figure3
 
-Model selcetion
+“Model selcetion”
 
 Figure S11
+
+“Funnel”
+
+Asymmetry test
