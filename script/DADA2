@@ -3,6 +3,8 @@ time qiime tools import  --type 'SampleData[PairedEndSequencesWithQuality]'  --i
 #Filter and trim
 qiime dada2 denoise-paired --i-demultiplexed-seqs paired-end-demux.qza --p-trim-left-f n --p-trim-left-r n --p-trunc-len-f l1 --p-trunc-len-r l2 --o-table table.qza --o-representative-sequences rep-seqs.qza --o-denoising-stats denoising-stats.qza --p-n-threads 30 #调用所有CPU
 
+time qiime metadata tabulate  --m-input-file ./denoising-stats.qza    --o-visualization ./dada2_stats.qzv
+
 qiime tools export --input-path table.qza --output-path phyloseq
 #Construct sequence table
 biom convert -i feature-table.biom -o otu_table1.txt --to-tsv
