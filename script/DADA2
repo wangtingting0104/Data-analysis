@@ -8,3 +8,7 @@ time qiime metadata tabulate  --m-input-file ./denoising-stats.qza    --o-visual
 qiime tools export --input-path table.qza --output-path phyloseq
 #Construct sequence table
 biom convert -i feature-table.biom -o otu_table1.txt --to-tsv
+##represent sequence
+qiime tools export  --input-path rep-seqs.qza  --output-path phyloseq  
+#Map to Silva database
+usearch -closed_ref rep-seqs.fasta -db SILVA_132_DNA.fasta -strand both -otutabout otu_re_tab.txt -tabbedout closed.txt
