@@ -33,7 +33,7 @@ write.csv(cor.p,"8cor_p.csv")
 cor.neten1 <- cor.neten
 write.csv(cor.neten1,"9cor_neten1.csv")
 
-cor.neten1[cor.neten<0.983 |cor.p>0.05] <- 0
+cor.neten1[cor.neten< threshold|cor.p>0.05] <- 0
 
 #Network Generation
 library(igraph)
